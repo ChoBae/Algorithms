@@ -1,8 +1,5 @@
 # 뉴스 클러스터링
-
-
 def solution(str1, str2):
-    
     answer = 0
     # 입력값 대문자 변환
     str1 = str1.upper()
