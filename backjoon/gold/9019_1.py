@@ -1,5 +1,8 @@
 from collections import deque
+import sys
+input = sys.stdin.readline
 dslr = ["D", 'S', 'L', 'R']
+
 def state(num, state):
     if state == 'D':
         tmp = num * 2
@@ -21,7 +24,7 @@ def bfs(start, target, visited):
     while q:
         nowNum, nowState = q.popleft()
         if int(nowNum) == int(target):
-            print(nowState)
+            answer.append(nowState)
             break
         for i in range(len(dslr)):
             newState = nowState + dslr[i]
@@ -32,7 +35,11 @@ def bfs(start, target, visited):
             
         
 t = int(input())
+answer = []
 for _ in range(t):
     visited = [0 for _ in range(10000)]
     a, b = input().split()
     bfs(a, b, visited)
+
+for i in range(t):
+    print(answer[i])
