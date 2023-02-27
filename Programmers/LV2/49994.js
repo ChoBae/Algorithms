@@ -8,7 +8,6 @@ function solution(dirs) {
   for (let dir of dirs) {
     let nowX = now[0] + move[dir][0];
     let nowY = now[1] + move[dir][1];
-
     if (nowX > 5 || nowX < -5 || nowY > 5 || nowY < -5) continue;
     // 반대루트도 넣어줘야함.. 개쩌네?
     route.add("" + now[0] + now[1] + nowX + nowY);
