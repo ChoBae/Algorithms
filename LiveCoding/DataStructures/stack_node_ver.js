@@ -14,6 +14,13 @@ class Stack {
     this.top = this.top.next;
     return value;
   }
+  isEmpty() {
+    return !this.top;
+    // let node = this.top
+    // while (node) {
+    //     if ()
+    // }
+  }
 }
 
 class Node {
@@ -34,3 +41,4 @@ console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack.pop());
 console.log(stack);
+
